@@ -1,0 +1,4 @@
+include 'core', 'dom', 'cli'
+project(':core').name = 'xml4jah-core'
+project(':dom').name = 'xml4jah-dom'
+project(':cli').name = 'xml4jah-cli'
