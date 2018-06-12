@@ -110,13 +110,15 @@ public class DocumentWriter
 		String nodeName = node.getNodeName();
 		buf.append(nodeName);
 
-		AttributeOrder attributeOrder = config.getAttributeOrder(nodeName);
-		if (node.getAttributes().getLength() != 0) {
-			if (attributeOrder == null) {
-				writeAttributes(buf, node.getAttributes());
-			} else {
-				writeAttributesWithOrder(buf, attributeOrder,
-						node.getAttributes());
+		if (node.getAttributes() != null) {
+			AttributeOrder attributeOrder = config.getAttributeOrder(nodeName);
+			if (node.getAttributes().getLength() != 0) {
+				if (attributeOrder == null) {
+					writeAttributes(buf, node.getAttributes());
+				} else {
+					writeAttributesWithOrder(buf, attributeOrder,
+							node.getAttributes());
+				}
 			}
 		}
 
