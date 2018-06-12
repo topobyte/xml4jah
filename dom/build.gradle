@@ -1,3 +1,6 @@
 dependencies {
     compile project(':xml4jah-core')
+
+    compile 'de.topobyte:system-utils:0.0.1'
+    compile 'de.topobyte:melon-strings:0.0.1'
 }
