@@ -17,18 +17,13 @@
 
 package de.topobyte.xml4jah.dom;
 
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-import org.apache.commons.io.IOUtils;
 import org.junit.Assert;
 import org.junit.Test;
 import org.w3c.dom.Document;
@@ -55,56 +50,36 @@ public class TestDocumentWriter
 	public void testRewrite()
 			throws IOException, ParserConfigurationException, SAXException
 	{
-		String text = documentAsText("adams/v1/source.xml");
-		Document doc = document();
-
-		DocumentWriterConfig config = new DocumentWriterConfig();
-		config.setAttributeOrder("book",
-				new AttributeOrder(Arrays.asList("year", "wikidata", "title")));
-
-		DocumentWriter writer = new DocumentWriter(config);
-		ByteArrayOutputStream baos = new ByteArrayOutputStream();
-		writer.write(doc, baos);
-
-		String output = baos.toString();
-		Assert.assertEquals(text, output);
+		test("adams/v1/source.xml", Arrays.asList("year", "wikidata", "title"));
 	}
 
 	@Test
 	public void testRewriteNoEndAtNewline()
 			throws IOException, ParserConfigurationException, SAXException
 	{
-		String text = documentAsText("adams/v1/no-ending-newline.xml");
-		Document doc = document();
-
 		DocumentWriterConfig config = new DocumentWriterConfig();
 		config.setWithEndingNewline(false);
 		config.setAttributeOrder("book",
 				new AttributeOrder(Arrays.asList("year", "wikidata", "title")));
 
-		DocumentWriter writer = new DocumentWriter(config);
-		ByteArrayOutputStream baos = new ByteArrayOutputStream();
-		writer.write(doc, baos);
-
-		String output = baos.toString();
-		Assert.assertEquals(text, output);
+		Util.test("adams/v1/no-ending-newline.xml", document(), config);
 	}
 
 	@Test
 	public void testNaturalOrder()
 			throws IOException, ParserConfigurationException, SAXException
 	{
-		String text = documentAsText("adams/v1/natural-order.xml");
-		Document doc = document();
-
 		DocumentWriterConfig config = new DocumentWriterConfig();
+		Util.test("adams/v1/natural-order.xml", document(), config);
+	}
 
-		DocumentWriter writer = new DocumentWriter(config);
-		ByteArrayOutputStream baos = new ByteArrayOutputStream();
-		writer.write(doc, baos);
+	private void test(String resource, List<String> order)
+			throws IOException, SAXException, ParserConfigurationException
+	{
+		DocumentWriterConfig config = new DocumentWriterConfig();
+		config.setAttributeOrder("book", new AttributeOrder(order));
 
-		String output = baos.toString();
-		Assert.assertEquals(text, output);
+		Util.test(resource, document(), config);
 	}
 
 	private List<Book> books()
@@ -132,19 +107,7 @@ public class TestDocumentWriter
 	private Document document()
 			throws IOException, SAXException, ParserConfigurationException
 	{
-		InputStream input = Thread.currentThread().getContextClassLoader()
-				.getResource("adams/v1/source.xml").openStream();
-		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-		DocumentBuilder builder = factory.newDocumentBuilder();
-		return builder.parse(input);
-	}
-
-	private String documentAsText(String resource)
-			throws IOException, SAXException, ParserConfigurationException
-	{
-		InputStream input = Thread.currentThread().getContextClassLoader()
-				.getResource(resource).openStream();
-		return IOUtils.toString(input);
+		return Util.document("adams/v1/source.xml");
 	}
 
 }
