@@ -193,9 +193,9 @@ public class DocumentWriter
 		Strings.repeat(buf, config.getIndent(), depth);
 	}
 
-	private void write(String name) throws IOException
+	private void write(String string) throws IOException
 	{
-		output.write(name.getBytes());
+		output.write(string.getBytes());
 	}
 
 }
