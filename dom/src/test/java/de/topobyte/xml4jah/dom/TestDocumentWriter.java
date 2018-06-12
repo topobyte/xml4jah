@@ -55,7 +55,7 @@ public class TestDocumentWriter
 	public void testRewrite()
 			throws IOException, ParserConfigurationException, SAXException
 	{
-		String text = documentAsText("adams/source.xml");
+		String text = documentAsText("adams/v1/source.xml");
 		Document doc = document();
 
 		DocumentWriterConfig config = new DocumentWriterConfig();
@@ -74,7 +74,7 @@ public class TestDocumentWriter
 	public void testRewriteNoEndAtNewline()
 			throws IOException, ParserConfigurationException, SAXException
 	{
-		String text = documentAsText("adams/no-ending-newline.xml");
+		String text = documentAsText("adams/v1/no-ending-newline.xml");
 		Document doc = document();
 
 		DocumentWriterConfig config = new DocumentWriterConfig();
@@ -94,7 +94,7 @@ public class TestDocumentWriter
 	public void testNaturalOrder()
 			throws IOException, ParserConfigurationException, SAXException
 	{
-		String text = documentAsText("adams/natural-order.xml");
+		String text = documentAsText("adams/v1/natural-order.xml");
 		Document doc = document();
 
 		DocumentWriterConfig config = new DocumentWriterConfig();
@@ -133,7 +133,7 @@ public class TestDocumentWriter
 			throws IOException, SAXException, ParserConfigurationException
 	{
 		InputStream input = Thread.currentThread().getContextClassLoader()
-				.getResource("adams/source.xml").openStream();
+				.getResource("adams/v1/source.xml").openStream();
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder builder = factory.newDocumentBuilder();
 		return builder.parse(input);
