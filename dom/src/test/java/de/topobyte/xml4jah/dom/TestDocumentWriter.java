@@ -57,7 +57,7 @@ public class TestDocumentWriter
 	public void testRewriteNoEndAtNewline()
 			throws IOException, ParserConfigurationException, SAXException
 	{
-		String text = documentAsText("adams/noendingnewline.xml");
+		String text = documentAsText("adams/no-ending-newline.xml");
 		Document doc = document();
 
 		DocumentWriterConfig config = new DocumentWriterConfig();
