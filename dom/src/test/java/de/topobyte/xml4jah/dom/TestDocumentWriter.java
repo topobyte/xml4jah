@@ -38,10 +38,30 @@ public class TestDocumentWriter
 	public void testRewrite()
 			throws IOException, ParserConfigurationException, SAXException
 	{
-		String text = documentAsText();
+		String text = documentAsText("adams/source.xml");
 		Document doc = document();
 
 		DocumentWriterConfig config = new DocumentWriterConfig();
+		config.setAttributeOrder("book",
+				new AttributeOrder(Arrays.asList("year", "wikidata", "title")));
+
+		DocumentWriter writer = new DocumentWriter(config);
+		ByteArrayOutputStream baos = new ByteArrayOutputStream();
+		writer.write(doc, baos);
+
+		String output = baos.toString();
+		Assert.assertEquals(text, output);
+	}
+
+	@Test
+	public void testRewriteNoEndAtNewline()
+			throws IOException, ParserConfigurationException, SAXException
+	{
+		String text = documentAsText("adams/noendingnewline.xml");
+		Document doc = document();
+
+		DocumentWriterConfig config = new DocumentWriterConfig();
+		config.setWithEndingNewline(false);
 		config.setAttributeOrder("book",
 				new AttributeOrder(Arrays.asList("year", "wikidata", "title")));
 
@@ -85,11 +105,11 @@ public class TestDocumentWriter
 		return builder.parse(input);
 	}
 
-	private String documentAsText()
+	private String documentAsText(String resource)
 			throws IOException, SAXException, ParserConfigurationException
 	{
 		InputStream input = Thread.currentThread().getContextClassLoader()
-				.getResource("adams/source.xml").openStream();
+				.getResource(resource).openStream();
 		return IOUtils.toString(input);
 	}
 
