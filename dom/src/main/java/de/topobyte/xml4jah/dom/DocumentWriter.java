@@ -55,6 +55,9 @@ public class DocumentWriter
 		NodeList nodes = document.getChildNodes();
 		for (int i = 0; i < nodes.getLength(); i++) {
 			Node node = nodes.item(i);
+			if (node.getNodeType() == Node.TEXT_NODE) {
+				continue;
+			}
 			write(node, 0);
 			if (i < nodes.getLength() - 1) {
 				write(LS);
@@ -94,6 +97,9 @@ public class DocumentWriter
 
 		for (int i = 0; i < nodes.getLength(); i++) {
 			Node child = nodes.item(i);
+			if (child.getNodeType() == Node.TEXT_NODE) {
+				continue;
+			}
 			write(child, depth + 1);
 			write(LS);
 		}
