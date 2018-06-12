@@ -1,0 +1,7 @@
+#!/bin/bash
+
+DIR=$(dirname $0)
+CMD="$DIR/xml4jah.sh"
+CLASS="de.topobyte.xml4jah.cli.Cat"
+
+exec "$CMD" "$CLASS" "$@"
