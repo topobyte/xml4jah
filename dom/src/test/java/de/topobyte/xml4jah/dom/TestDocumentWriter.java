@@ -73,6 +73,23 @@ public class TestDocumentWriter
 		Assert.assertEquals(text, output);
 	}
 
+	@Test
+	public void testNaturalOrder()
+			throws IOException, ParserConfigurationException, SAXException
+	{
+		String text = documentAsText("adams/natural-order.xml");
+		Document doc = document();
+
+		DocumentWriterConfig config = new DocumentWriterConfig();
+
+		DocumentWriter writer = new DocumentWriter(config);
+		ByteArrayOutputStream baos = new ByteArrayOutputStream();
+		writer.write(doc, baos);
+
+		String output = baos.toString();
+		Assert.assertEquals(text, output);
+	}
+
 	private List<Book> books()
 			throws IOException, ParserConfigurationException, SAXException
 	{
