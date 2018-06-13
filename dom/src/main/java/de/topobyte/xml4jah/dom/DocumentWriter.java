@@ -93,17 +93,46 @@ public class DocumentWriter
 	{
 		NodeList nodes = node.getChildNodes();
 		int numChildren = nodes.getLength();
-		if (numChildren == 0) {
-			writeNoChildren(node, depth);
+		boolean hasElementsChildren = hasElementChildren(nodes);
+		if (!hasElementsChildren) {
+			if (numChildren == 0) {
+				writeNoChildren(node, depth);
+			} else {
+				writeWithContent(node, nodes, depth);
+			}
 		} else {
 			writeWithChildren(node, nodes, depth);
 		}
+	}
+
+	private boolean hasElementChildren(NodeList nodes)
+	{
+		for (int i = 0; i < nodes.getLength(); i++) {
+			Node child = nodes.item(i);
+			if (child.getNodeType() == Node.ELEMENT_NODE) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	private void writeNoChildren(Node node, int depth)
 			throws DOMException, IOException
 	{
 		writeOpening(node, depth, true);
+	}
+
+	private void writeWithContent(Node node, NodeList nodes, int depth)
+			throws IOException
+	{
+		writeOpening(node, depth, false);
+		for (int i = 0; i < nodes.getLength(); i++) {
+			Node child = nodes.item(i);
+			if (child.getNodeType() == Node.TEXT_NODE) {
+				write(child.getTextContent());
+			}
+		}
+		writeEnding(node, 0);
 	}
 
 	private void writeWithChildren(Node node, NodeList nodes, int depth)

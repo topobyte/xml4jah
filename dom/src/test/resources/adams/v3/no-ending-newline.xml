@@ -1,0 +1,57 @@
+<books>
+  <book>
+    <year>1979</year>
+    <title>The Hitchhiker's Guide to the Galaxy</title>
+    <wikidata>Q3107329</wikidata>
+  </book>
+  <book>
+    <year>1980</year>
+    <title>The Restaurant at the End of the Universe</title>
+    <wikidata>Q578895</wikidata>
+  </book>
+  <book>
+    <year>1982</year>
+    <title>Life, the Universe and Everything</title>
+    <wikidata>Q721</wikidata>
+  </book>
+  <book>
+    <year>1983</year>
+    <title>The Meaning of Liff</title>
+    <wikidata>Q875382</wikidata>
+  </book>
+  <book>
+    <year>1984</year>
+    <title>So Long, and Thanks for All the Fish</title>
+    <wikidata>Q1042294</wikidata>
+  </book>
+  <book>
+    <year>1985</year>
+    <title>The Hitchhiker's Guide to the Galaxy: The Original Radio Scripts</title>
+    <wikidata>Q7739857</wikidata>
+  </book>
+  <book>
+    <year>1987</year>
+    <title>Dirk Gently's Holistic Detective Agency</title>
+    <wikidata>Q902712</wikidata>
+  </book>
+  <book>
+    <year>1988</year>
+    <title>The Long Dark Tea-Time of the Soul</title>
+    <wikidata>Q1199348</wikidata>
+  </book>
+  <book>
+    <year>1992</year>
+    <title>Mostly Harmless</title>
+    <wikidata>Q187655</wikidata>
+  </book>
+  <book>
+    <year>2002</year>
+    <title>The Salmon of Doubt</title>
+    <wikidata>Q468135</wikidata>
+  </book>
+  <book>
+    <year>2014</year>
+    <title>The Time Traveler's Almanac</title>
+    <wikidata>Q17110831</wikidata>
+  </book>
+</books>
