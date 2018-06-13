@@ -62,6 +62,18 @@ public class TestDocumentWriter
 	}
 
 	@Test
+	public void testRewriteNoXmlDelcaration()
+			throws IOException, ParserConfigurationException, SAXException
+	{
+		DocumentWriterConfig config = new DocumentWriterConfig();
+		config.setWithDeclaration(false);
+		config.setAttributeOrder("book",
+				new AttributeOrder(Arrays.asList("year", "wikidata", "title")));
+
+		Util.test("adams/v1/no-xml-declaration.xml", document(), config);
+	}
+
+	@Test
 	public void testNaturalOrder()
 			throws IOException, ParserConfigurationException, SAXException
 	{
