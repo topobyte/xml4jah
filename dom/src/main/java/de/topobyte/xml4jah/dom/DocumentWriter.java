@@ -69,6 +69,11 @@ public class DocumentWriter
 	public void write(Document document, OutputStream output) throws IOException
 	{
 		this.output = output;
+		if (config.isWithDeclaration()) {
+			write(String.format("<?xml version=\"%s\" encoding=\"%s\"?>", "1.0",
+					"UTF-8"));
+			write(LS);
+		}
 		NodeList nodes = document.getChildNodes();
 		for (int i = 0; i < nodes.getLength(); i++) {
 			Node node = nodes.item(i);

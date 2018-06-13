@@ -24,6 +24,7 @@ public class DocumentWriterConfig
 {
 
 	private String indent = "  ";
+	private boolean withDeclaration = true;
 	private boolean withEndingNewline = true;
 
 	private Map<String, AttributeOrder> attributeOrders = new HashMap<>();
@@ -36,6 +37,16 @@ public class DocumentWriterConfig
 	public void setIndent(String indent)
 	{
 		this.indent = indent;
+	}
+
+	public boolean isWithDeclaration()
+	{
+		return withDeclaration;
+	}
+
+	public void setWithDeclaration(boolean withDeclaration)
+	{
+		this.withDeclaration = withDeclaration;
 	}
 
 	public boolean isWithEndingNewline()
