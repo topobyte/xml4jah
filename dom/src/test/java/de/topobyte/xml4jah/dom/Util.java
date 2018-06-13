@@ -20,6 +20,8 @@ package de.topobyte.xml4jah.dom;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -28,6 +30,9 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.apache.commons.io.IOUtils;
 import org.junit.Assert;
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import de.topobyte.xml4jah.core.DocumentWriterConfig;
@@ -64,6 +69,26 @@ public class Util
 
 		String output = baos.toString();
 		Assert.assertEquals(text, output);
+	}
+
+	public static List<Book> books1(Document doc)
+			throws IOException, ParserConfigurationException, SAXException
+	{
+		List<Book> books = new ArrayList<>();
+
+		NodeList bookNodes = doc.getElementsByTagName("book");
+		for (int i = 0; i < bookNodes.getLength(); i++) {
+			Element eBook = (Element) bookNodes.item(i);
+
+			NamedNodeMap attributes = eBook.getAttributes();
+			String year = attributes.getNamedItem("year").getNodeValue();
+			String title = attributes.getNamedItem("title").getNodeValue();
+			String wikidata = attributes.getNamedItem("wikidata")
+					.getNodeValue();
+			books.add(new Book(year, title, wikidata));
+		}
+
+		return books;
 	}
 
 }

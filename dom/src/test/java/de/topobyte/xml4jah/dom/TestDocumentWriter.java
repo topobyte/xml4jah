@@ -18,7 +18,6 @@
 package de.topobyte.xml4jah.dom;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -27,9 +26,6 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.junit.Assert;
 import org.junit.Test;
 import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import de.topobyte.xml4jah.core.AttributeOrder;
@@ -42,7 +38,7 @@ public class TestDocumentWriter
 	public void testParseBooks()
 			throws IOException, ParserConfigurationException, SAXException
 	{
-		List<Book> books = books();
+		List<Book> books = Util.books1(document());
 		Assert.assertEquals(11, books.size());
 	}
 
@@ -80,28 +76,6 @@ public class TestDocumentWriter
 		config.setAttributeOrder("book", new AttributeOrder(order));
 
 		Util.test(resource, document(), config);
-	}
-
-	private List<Book> books()
-			throws IOException, ParserConfigurationException, SAXException
-	{
-		Document doc = document();
-
-		List<Book> books = new ArrayList<>();
-
-		NodeList bookNodes = doc.getElementsByTagName("book");
-		for (int i = 0; i < bookNodes.getLength(); i++) {
-			Element eBook = (Element) bookNodes.item(i);
-
-			NamedNodeMap attributes = eBook.getAttributes();
-			String year = attributes.getNamedItem("year").getNodeValue();
-			String title = attributes.getNamedItem("title").getNodeValue();
-			String wikidata = attributes.getNamedItem("wikidata")
-					.getNodeValue();
-			books.add(new Book(year, title, wikidata));
-		}
-
-		return books;
 	}
 
 	private Document document()
