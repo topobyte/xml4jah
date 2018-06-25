@@ -24,6 +24,7 @@ import java.nio.file.Path;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.w3c.dom.Comment;
 import org.w3c.dom.DOMException;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -96,6 +97,11 @@ public class DocumentWriter
 
 	private void write(Node node, int depth) throws IOException
 	{
+		if (node.getNodeType() == Node.COMMENT_NODE) {
+			writeComment((Comment) node, depth);
+			return;
+		}
+
 		NodeList nodes = node.getChildNodes();
 		int numChildren = nodes.getLength();
 		boolean hasElementsChildren = hasElementChildren(nodes);
@@ -108,6 +114,18 @@ public class DocumentWriter
 		} else {
 			writeWithChildren(node, nodes, depth);
 		}
+	}
+
+	private void writeComment(Comment comment, int depth) throws IOException
+	{
+		StringBuilder buf = new StringBuilder();
+		indent(buf, depth);
+
+		buf.append("<!--");
+		buf.append(comment.getData());
+		buf.append("-->");
+
+		write(buf.toString());
 	}
 
 	private boolean hasElementChildren(NodeList nodes)
