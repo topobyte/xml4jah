@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+  <!-- the 70s -->
+  <decade years="70s">
+    <book year="1979" wikidata="Q3107329" title="The Hitchhiker's Guide to the Galaxy"/>
+  </decade>
+  <!-- the 80s -->
+  <decade years="80s">
+    <book year="1980" wikidata="Q578895" title="The Restaurant at the End of the Universe"/>
+    <book year="1982" wikidata="Q721" title="Life, the Universe and Everything"/>
+    <book year="1983" wikidata="Q875382" title="The Meaning of Liff"/>
+    <book year="1984" wikidata="Q1042294" title="So Long, and Thanks for All the Fish"/>
+    <book year="1985" wikidata="Q7739857" title="The Hitchhiker's Guide to the Galaxy: The Original Radio Scripts"/>
+    <book year="1987" wikidata="Q902712" title="Dirk Gently's Holistic Detective Agency"/>
+    <book year="1988" wikidata="Q1199348" title="The Long Dark Tea-Time of the Soul"/>
+  </decade>
+  <!-- the 90s -->
+  <decade years="90s">
+    <book year="1992" wikidata="Q187655" title="Mostly Harmless"/>
+  </decade>
+  <!-- the 2000s -->
+  <decade years="2000s">
+    <book year="2002" wikidata="Q468135" title="The Salmon of Doubt"/>
+  </decade>
+  <!-- the 2010s -->
+  <decade years="2010s">
+    <book year="2014" wikidata="Q17110831" title="The Time Traveler's Almanac"/>
+  </decade>
+</books>
