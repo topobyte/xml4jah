@@ -3,6 +3,7 @@ dependencies {
 
     compile 'de.topobyte:system-utils:0.0.1'
     compile 'de.topobyte:melon-strings:0.0.1'
+    compile 'org.apache.commons:commons-text:1.4'
 
     testCompile 'junit:junit:4.12'
     testCompile 'commons-io:commons-io:2.4'

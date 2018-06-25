@@ -24,6 +24,7 @@ import java.nio.file.Path;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.apache.commons.text.StringEscapeUtils;
 import org.w3c.dom.Comment;
 import org.w3c.dom.DOMException;
 import org.w3c.dom.Document;
@@ -152,7 +153,7 @@ public class DocumentWriter
 		for (int i = 0; i < nodes.getLength(); i++) {
 			Node child = nodes.item(i);
 			if (child.getNodeType() == Node.TEXT_NODE) {
-				write(child.getTextContent());
+				writeEscaped(child.getTextContent());
 			}
 		}
 		writeEnding(node, 0);
@@ -265,6 +266,12 @@ public class DocumentWriter
 	private void write(String string) throws IOException
 	{
 		output.write(string.getBytes());
+	}
+
+	private void writeEscaped(String string) throws IOException
+	{
+		String escaped = StringEscapeUtils.escapeXml10(string);
+		output.write(escaped.getBytes());
 	}
 
 }
