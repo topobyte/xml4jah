@@ -167,6 +167,9 @@ public class DocumentWriter
 		for (int i = 0; i < nodes.getLength(); i++) {
 			Node child = nodes.item(i);
 			if (child.getNodeType() == Node.TEXT_NODE) {
+				if (config.isPreserveEmptyLines()) {
+					writePreservedNewlines(child);
+				}
 				continue;
 			}
 			write(child, depth + 1);
@@ -174,6 +177,18 @@ public class DocumentWriter
 		}
 
 		writeEnding(node, depth);
+	}
+
+	private void writePreservedNewlines(Node child) throws IOException
+	{
+		String text = child.getTextContent();
+		String lines[] = text.split("\\r?\\n");
+		if (lines.length > 2) {
+			int more = lines.length - 2;
+			for (int k = 0; k < more; k++) {
+				write(LS);
+			}
+		}
 	}
 
 	private void writeOpening(Node node, int depth, boolean close)

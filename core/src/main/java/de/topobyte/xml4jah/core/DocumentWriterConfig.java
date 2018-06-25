@@ -26,6 +26,7 @@ public class DocumentWriterConfig
 	private String indent = "  ";
 	private boolean withDeclaration = true;
 	private boolean withEndingNewline = true;
+	private boolean preserveEmptyLines = false;
 
 	private Map<String, AttributeOrder> attributeOrders = new HashMap<>();
 
@@ -57,6 +58,16 @@ public class DocumentWriterConfig
 	public void setWithEndingNewline(boolean withEndingNewline)
 	{
 		this.withEndingNewline = withEndingNewline;
+	}
+
+	public boolean isPreserveEmptyLines()
+	{
+		return preserveEmptyLines;
+	}
+
+	public void setPreserveEmptyLines(boolean preserveEmptyLines)
+	{
+		this.preserveEmptyLines = preserveEmptyLines;
 	}
 
 	public AttributeOrder getAttributeOrder(String nodeName)

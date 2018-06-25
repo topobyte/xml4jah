@@ -19,7 +19,6 @@ package de.topobyte.xml4jah.dom;
 
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 
@@ -37,17 +36,23 @@ public class TestDocumentWriter5
 	public void testRewrite()
 			throws IOException, ParserConfigurationException, SAXException
 	{
-		test("adams/v5/no-newlines.xml",
-				Arrays.asList("year", "wikidata", "title"));
+		DocumentWriterConfig config = new DocumentWriterConfig();
+		config.setAttributeOrder("book",
+				new AttributeOrder(Arrays.asList("year", "wikidata", "title")));
+		config.setPreserveEmptyLines(true);
+
+		Util.test("adams/v5/source.xml", document(), config);
 	}
 
-	private void test(String resource, List<String> order)
-			throws IOException, SAXException, ParserConfigurationException
+	@Test
+	public void testRewriteNoNewlines()
+			throws IOException, ParserConfigurationException, SAXException
 	{
 		DocumentWriterConfig config = new DocumentWriterConfig();
-		config.setAttributeOrder("book", new AttributeOrder(order));
+		config.setAttributeOrder("book",
+				new AttributeOrder(Arrays.asList("year", "wikidata", "title")));
 
-		Util.test(resource, document(), config);
+		Util.test("adams/v5/no-newlines.xml", document(), config);
 	}
 
 	private Document document()
