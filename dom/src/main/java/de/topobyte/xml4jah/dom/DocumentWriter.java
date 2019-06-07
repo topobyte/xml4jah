@@ -182,7 +182,7 @@ public class DocumentWriter
 	private void writePreservedNewlines(Node child) throws IOException
 	{
 		String text = child.getTextContent();
-		String lines[] = text.split("\\r?\\n");
+		String lines[] = text.split("\\r?\\n", -1);
 		if (lines.length > 2) {
 			int more = lines.length - 2;
 			for (int k = 0; k < more; k++) {
