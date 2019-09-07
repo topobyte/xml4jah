@@ -18,8 +18,8 @@ We provide access to the artifacts via our own Maven repository:
 
 The packages are available at these coordinates:
 
-    de.topobyte:xml4jah-core:0.0.2
-    de.topobyte:xml4jah-dom:0.0.2
+    de.topobyte:xml4jah-core:0.0.3
+    de.topobyte:xml4jah-dom:0.0.3
 
 You can also browse the repository online:
 
