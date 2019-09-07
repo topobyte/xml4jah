@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+  <book year="1979" wikidata="Q3107329" title="The Hitchhiker's Guide to the Galaxy"/>
+  <book year="1999" wikidata="Q???????" title="A book with an ampersand &amp; inside"/>
+  <book year="2000" wikidata="Q???????" title="A book with a less than &lt; inside"/>
+  <book year="2001" wikidata="Q???????" title="A book with a greater than > inside"/>
+</books>

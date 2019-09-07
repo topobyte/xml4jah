@@ -265,10 +265,10 @@ public class DocumentWriter
 
 	private void appendAttribute(StringBuilder buf, Node item)
 	{
-		buf.append(item.getNodeName().toString());
+		buf.append(item.getNodeName());
 		buf.append("=");
 		buf.append('"');
-		buf.append(item.getNodeValue().toString());
+		buf.append(Escaping.escapeXml10(item.getNodeValue()));
 		buf.append('"');
 	}
 
