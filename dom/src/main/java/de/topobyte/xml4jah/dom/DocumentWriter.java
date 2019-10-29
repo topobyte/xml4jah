@@ -71,8 +71,15 @@ public class DocumentWriter
 	{
 		this.output = output;
 		if (config.isWithDeclaration()) {
-			write(String.format("<?xml version=\"%s\" encoding=\"%s\"?>", "1.0",
-					"UTF-8"));
+			boolean isStandalone = document.getXmlStandalone();
+			if (isStandalone || config.isDeclareDefaultStandalone()) {
+				write(String.format(
+						"<?xml version=\"%s\" encoding=\"%s\" standalone=\"%s\"?>",
+						"1.0", "UTF-8", isStandalone ? "yes" : "no"));
+			} else {
+				write(String.format("<?xml version=\"%s\" encoding=\"%s\"?>",
+						"1.0", "UTF-8"));
+			}
 			write(LS);
 		}
 		NodeList nodes = document.getChildNodes();

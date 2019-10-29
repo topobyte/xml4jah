@@ -25,6 +25,7 @@ public class DocumentWriterConfig
 
 	private String indent = "  ";
 	private boolean withDeclaration = true;
+	private boolean declareDefaultStandalone = false;
 	private boolean withEndingNewline = true;
 	private boolean preserveEmptyLines = false;
 
@@ -48,6 +49,16 @@ public class DocumentWriterConfig
 	public void setWithDeclaration(boolean withDeclaration)
 	{
 		this.withDeclaration = withDeclaration;
+	}
+
+	public boolean isDeclareDefaultStandalone()
+	{
+		return declareDefaultStandalone;
+	}
+
+	public void setDeclareDefaultStandalone(boolean declareDefaultStandalone)
+	{
+		this.declareDefaultStandalone = declareDefaultStandalone;
 	}
 
 	public boolean isWithEndingNewline()

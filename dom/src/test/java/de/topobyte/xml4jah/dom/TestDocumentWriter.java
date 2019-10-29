@@ -81,6 +81,26 @@ public class TestDocumentWriter
 		Util.test("adams/v1/natural-order.xml", document(), config);
 	}
 
+	@Test
+	public void testWithDefaultStandalone()
+			throws IOException, ParserConfigurationException, SAXException
+	{
+		DocumentWriterConfig config = new DocumentWriterConfig();
+		config.setDeclareDefaultStandalone(true);
+		Util.test("adams/v1/with-default-standalone.xml", document(), config);
+	}
+
+	@Test
+	public void testWithStandaloneYes()
+			throws IOException, ParserConfigurationException, SAXException
+	{
+		DocumentWriterConfig config = new DocumentWriterConfig();
+		config.setDeclareDefaultStandalone(true);
+		Document doc = document();
+		doc.setXmlStandalone(true);
+		Util.test("adams/v1/with-standalone-yes.xml", doc, config);
+	}
+
 	private void test(String resource, List<String> order)
 			throws IOException, SAXException, ParserConfigurationException
 	{
