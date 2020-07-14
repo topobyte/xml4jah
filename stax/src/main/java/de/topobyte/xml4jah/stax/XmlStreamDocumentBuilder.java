@@ -43,12 +43,12 @@ import org.w3c.dom.Element;
  * still be able to easily traverse individual fragments of the document using
  * the DOM methods and {@link XPath}.
  */
-public class FragmentParser
+public class XmlStreamDocumentBuilder
 {
 
 	private DocumentBuilder documentBuilder;
 
-	public FragmentParser() throws ParserConfigurationException
+	public XmlStreamDocumentBuilder() throws ParserConfigurationException
 	{
 		DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory
 				.newInstance();

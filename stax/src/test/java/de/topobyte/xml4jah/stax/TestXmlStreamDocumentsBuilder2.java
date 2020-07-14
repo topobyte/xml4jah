@@ -43,7 +43,7 @@ import de.topobyte.xml4jah.core.AttributeOrder;
 import de.topobyte.xml4jah.core.DocumentWriterConfig;
 import de.topobyte.xml4jah.dom.DocumentWriter;
 
-public class TestFragmentParser2
+public class TestXmlStreamDocumentsBuilder2
 {
 
 	@Test
@@ -84,7 +84,7 @@ public class TestFragmentParser2
 			String expected)
 			throws ParserConfigurationException, XMLStreamException, IOException
 	{
-		FragmentParser parser = new FragmentParser();
+		XmlStreamDocumentBuilder parser = new XmlStreamDocumentBuilder();
 		Document doc = parser.build(reader);
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		writer.write(doc, baos);
