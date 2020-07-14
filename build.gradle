@@ -9,7 +9,8 @@ allprojects {
 
 ext.libraries = [
     project(':xml4jah-core'),
-    project(':xml4jah-dom')
+    project(':xml4jah-dom'),
+    project(':xml4jah-stax')
 ]
 
 subprojects {
