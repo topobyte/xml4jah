@@ -28,10 +28,21 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
+import javax.xml.xpath.XPath;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
+/**
+ * A class for getting the best of both the StAX and DOM approaches. When
+ * parsing an XML document using StAX, this class'
+ * {@link #build(XMLStreamReader)} method can be used to build a DOM
+ * {@link Document} representing the XML subtree at the current element. This
+ * allows you to scan large document that you would not want to load as a
+ * {@link Document} as a whole because of its size using stream processing, but
+ * still be able to easily traverse individual fragments of the document using
+ * the DOM methods and {@link XPath}.
+ */
 public class FragmentParser
 {
 
@@ -44,6 +55,17 @@ public class FragmentParser
 		documentBuilder = documentBuilderFactory.newDocumentBuilder();
 	}
 
+	/**
+	 * While processing an XML document using {@link XMLStreamReader}, build and
+	 * return the subtree of the document that starts at the current element of
+	 * traversal.
+	 * 
+	 * @param reader
+	 *            the reader on the XML stream
+	 * @return a {@link Document} representing the current subtree
+	 * @throws FileNotFoundException
+	 * @throws XMLStreamException
+	 */
 	public Document build(XMLStreamReader reader)
 			throws FileNotFoundException, XMLStreamException
 	{
