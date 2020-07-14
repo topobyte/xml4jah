@@ -1,0 +1,158 @@
+<===> input.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+  <author wikidata="Q42" name="Douglas Adams">
+    <book year="1979" wikidata="Q3107329" title="The Hitchhiker's Guide to the Galaxy"/>
+    <book year="1980" wikidata="Q578895" title="The Restaurant at the End of the Universe"/>
+    <book year="1982" wikidata="Q721" title="Life, the Universe and Everything"/>
+    <book year="1983" wikidata="Q875382" title="The Meaning of Liff"/>
+    <book year="1984" wikidata="Q1042294" title="So Long, and Thanks for All the Fish"/>
+    <book year="1985" wikidata="Q7739857" title="The Hitchhiker's Guide to the Galaxy: The Original Radio Scripts"/>
+    <book year="1986" wikidata="Q7771858" title="The Utterly Utterly Merry Comic Relief Christmas Book"/>
+    <book year="1987" wikidata="Q902712" title="Dirk Gently's Holistic Detective Agency"/>
+    <book year="1988" wikidata="Q1199348" title="The Long Dark Tea-Time of the Soul"/>
+    <book year="1992" wikidata="Q187655" title="Mostly Harmless"/>
+    <book year="2002" wikidata="Q468135" title="The Salmon of Doubt"/>
+    <book year="2014" wikidata="Q17110831" title="The Time Traveler's Almanac"/>
+  </author>
+  <author wikidata="Q3335" name="George Orwell">
+    <book year="1931" wikidata="Q2020355" title="A Hanging"/>
+    <book year="1933" wikidata="Q1355487" title="Down and Out in Paris and London"/>
+    <book year="1933" wikidata="Q1355487" title="Down and Out in Paris and London"/>
+    <book year="1934" wikidata="Q1762079" title="Burmese Days"/>
+    <book year="1935" wikidata="Q2619167" title="A Clergyman's Daughter"/>
+    <book year="1936" wikidata="Q526227" title="Shooting an Elephant"/>
+    <book year="1936" wikidata="Q1217656" title="Keep the Aspidistra Flying"/>
+    <book year="1937" wikidata="Q1197966" title="The Road to Wigan Pier"/>
+    <book year="1938" wikidata="Q514694" title="Homage to Catalonia"/>
+    <book year="1939" wikidata="Q967866" title="Coming Up for Air"/>
+    <book year="1940" wikidata="Q2908748" title="Inside the Whale"/>
+    <book year="1940" wikidata="Q6037999" title="Inside the Whale and Other Essays"/>
+    <book year="1941" wikidata="Q5378009" title="England Your England"/>
+    <book year="1945" wikidata="Q1396889" title="Animal Farm"/>
+    <book year="1946" wikidata="Q2273966" title="Politics and the English Language"/>
+    <book year="1946" wikidata="Q7204300" title="Pleasure Spots"/>
+    <book year="1949" wikidata="Q208460" title="1984"/>
+    <book year="1965" wikidata="Q5249517" title="Decline of the English Murder"/>
+  </author>
+  <author wikidata="Q892" name="J. R. R. Tolkien">
+    <book year="1929" wikidata="Q330157" title="Ancrene Wisse and Hali Meiðhad"/>
+    <book year="1937" wikidata="Q74287" title="The Hobbit"/>
+    <book year="1945" wikidata="Q504502" title="The Lay of Aotrou and Itroun"/>
+    <book year="1947" wikidata="Q330722" title="On Fairy-Stories"/>
+    <book year="1949" wikidata="Q471398" title="Farmer Giles of Ham"/>
+    <book year="1954" wikidata="Q208002" title="The Fellowship of the Ring"/>
+    <book year="1954" wikidata="Q332388" title="The Two Towers"/>
+    <book year="1955" wikidata="Q332581" title="The Return of the King"/>
+    <book year="1962" wikidata="Q331804" title="The Adventures of Tom Bombadil"/>
+    <book year="1964" wikidata="Q534739" title="Tree and Leaf"/>
+    <book year="1966" wikidata="Q4264977" title="The Tolkien Reader"/>
+    <book year="1967" wikidata="Q267881" title="The Road Goes Ever On"/>
+    <book year="1967" wikidata="Q478250" title="Smith of Wootton Major"/>
+    <book year="1976" wikidata="Q534991" title="The Father Christmas Letters"/>
+    <book year="1977" wikidata="Q79762" title="The Silmarillion"/>
+    <book year="1977" wikidata="Q331061" title="Quenta Silmarillion"/>
+    <book year="1977" wikidata="Q330826" title="Ainulindalë"/>
+    <book year="1977" wikidata="Q330898" title="Valaquenta"/>
+    <book year="1977" wikidata="Q331142" title="Akallabêth"/>
+    <book year="1980" wikidata="Q7207368" title="Poems and Stories"/>
+    <book year="1982" wikidata="Q330396" title="Finn and Hengest"/>
+    <book year="1982" wikidata="Q535896" title="Mr. Bliss"/>
+    <book year="1983" wikidata="Q330582" title="The Monsters and the Critics"/>
+    <book year="1985" wikidata="Q340607" title="The Lays of Beleriand"/>
+    <book year="1986" wikidata="Q502032" title="The Shaping of Middle-earth"/>
+    <book year="1987" wikidata="Q502579" title="The Lost Road and Other Writings"/>
+    <book year="1988" wikidata="Q92463" title="The Annotated Hobbit"/>
+    <book year="1988" wikidata="Q502633" title="The Return of the Shadow"/>
+    <book year="1993" wikidata="Q503793" title="Morgoth's Ring"/>
+    <book year="1994" wikidata="Q503921" title="The War of the Jewels"/>
+    <book year="1996" wikidata="Q503974" title="The Peoples of Middle-earth"/>
+    <book year="1998" wikidata="Q535795" title="Roverandom"/>
+    <book year="2002" wikidata="Q330242" title="Beowulf and the Critics"/>
+    <book year="2007" wikidata="Q331651" title="The Children of Húrin"/>
+    <book year="2007" wikidata="Q2314942" title="The History of The Hobbit"/>
+    <book year="2013" wikidata="Q1101425" title="The Fall of Arthur"/>
+    <book year="2015" wikidata="Q20647835" title="The Story of Kullervo"/>
+    <book year="2018" wikidata="Q340515" title="Fall of Gondolin"/>
+  </author>
+</books>
+<===> fragment1.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<author wikidata="Q42" name="Douglas Adams">
+  <book year="1979" wikidata="Q3107329" title="The Hitchhiker's Guide to the Galaxy"/>
+  <book year="1980" wikidata="Q578895" title="The Restaurant at the End of the Universe"/>
+  <book year="1982" wikidata="Q721" title="Life, the Universe and Everything"/>
+  <book year="1983" wikidata="Q875382" title="The Meaning of Liff"/>
+  <book year="1984" wikidata="Q1042294" title="So Long, and Thanks for All the Fish"/>
+  <book year="1985" wikidata="Q7739857" title="The Hitchhiker's Guide to the Galaxy: The Original Radio Scripts"/>
+  <book year="1986" wikidata="Q7771858" title="The Utterly Utterly Merry Comic Relief Christmas Book"/>
+  <book year="1987" wikidata="Q902712" title="Dirk Gently's Holistic Detective Agency"/>
+  <book year="1988" wikidata="Q1199348" title="The Long Dark Tea-Time of the Soul"/>
+  <book year="1992" wikidata="Q187655" title="Mostly Harmless"/>
+  <book year="2002" wikidata="Q468135" title="The Salmon of Doubt"/>
+  <book year="2014" wikidata="Q17110831" title="The Time Traveler's Almanac"/>
+</author>
+<===> fragment2.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<author wikidata="Q3335" name="George Orwell">
+  <book year="1931" wikidata="Q2020355" title="A Hanging"/>
+  <book year="1933" wikidata="Q1355487" title="Down and Out in Paris and London"/>
+  <book year="1933" wikidata="Q1355487" title="Down and Out in Paris and London"/>
+  <book year="1934" wikidata="Q1762079" title="Burmese Days"/>
+  <book year="1935" wikidata="Q2619167" title="A Clergyman's Daughter"/>
+  <book year="1936" wikidata="Q526227" title="Shooting an Elephant"/>
+  <book year="1936" wikidata="Q1217656" title="Keep the Aspidistra Flying"/>
+  <book year="1937" wikidata="Q1197966" title="The Road to Wigan Pier"/>
+  <book year="1938" wikidata="Q514694" title="Homage to Catalonia"/>
+  <book year="1939" wikidata="Q967866" title="Coming Up for Air"/>
+  <book year="1940" wikidata="Q2908748" title="Inside the Whale"/>
+  <book year="1940" wikidata="Q6037999" title="Inside the Whale and Other Essays"/>
+  <book year="1941" wikidata="Q5378009" title="England Your England"/>
+  <book year="1945" wikidata="Q1396889" title="Animal Farm"/>
+  <book year="1946" wikidata="Q2273966" title="Politics and the English Language"/>
+  <book year="1946" wikidata="Q7204300" title="Pleasure Spots"/>
+  <book year="1949" wikidata="Q208460" title="1984"/>
+  <book year="1965" wikidata="Q5249517" title="Decline of the English Murder"/>
+</author>
+<===> fragment3.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<author wikidata="Q892" name="J. R. R. Tolkien">
+  <book year="1929" wikidata="Q330157" title="Ancrene Wisse and Hali Meiðhad"/>
+  <book year="1937" wikidata="Q74287" title="The Hobbit"/>
+  <book year="1945" wikidata="Q504502" title="The Lay of Aotrou and Itroun"/>
+  <book year="1947" wikidata="Q330722" title="On Fairy-Stories"/>
+  <book year="1949" wikidata="Q471398" title="Farmer Giles of Ham"/>
+  <book year="1954" wikidata="Q208002" title="The Fellowship of the Ring"/>
+  <book year="1954" wikidata="Q332388" title="The Two Towers"/>
+  <book year="1955" wikidata="Q332581" title="The Return of the King"/>
+  <book year="1962" wikidata="Q331804" title="The Adventures of Tom Bombadil"/>
+  <book year="1964" wikidata="Q534739" title="Tree and Leaf"/>
+  <book year="1966" wikidata="Q4264977" title="The Tolkien Reader"/>
+  <book year="1967" wikidata="Q267881" title="The Road Goes Ever On"/>
+  <book year="1967" wikidata="Q478250" title="Smith of Wootton Major"/>
+  <book year="1976" wikidata="Q534991" title="The Father Christmas Letters"/>
+  <book year="1977" wikidata="Q79762" title="The Silmarillion"/>
+  <book year="1977" wikidata="Q331061" title="Quenta Silmarillion"/>
+  <book year="1977" wikidata="Q330826" title="Ainulindalë"/>
+  <book year="1977" wikidata="Q330898" title="Valaquenta"/>
+  <book year="1977" wikidata="Q331142" title="Akallabêth"/>
+  <book year="1980" wikidata="Q7207368" title="Poems and Stories"/>
+  <book year="1982" wikidata="Q330396" title="Finn and Hengest"/>
+  <book year="1982" wikidata="Q535896" title="Mr. Bliss"/>
+  <book year="1983" wikidata="Q330582" title="The Monsters and the Critics"/>
+  <book year="1985" wikidata="Q340607" title="The Lays of Beleriand"/>
+  <book year="1986" wikidata="Q502032" title="The Shaping of Middle-earth"/>
+  <book year="1987" wikidata="Q502579" title="The Lost Road and Other Writings"/>
+  <book year="1988" wikidata="Q92463" title="The Annotated Hobbit"/>
+  <book year="1988" wikidata="Q502633" title="The Return of the Shadow"/>
+  <book year="1993" wikidata="Q503793" title="Morgoth's Ring"/>
+  <book year="1994" wikidata="Q503921" title="The War of the Jewels"/>
+  <book year="1996" wikidata="Q503974" title="The Peoples of Middle-earth"/>
+  <book year="1998" wikidata="Q535795" title="Roverandom"/>
+  <book year="2002" wikidata="Q330242" title="Beowulf and the Critics"/>
+  <book year="2007" wikidata="Q331651" title="The Children of Húrin"/>
+  <book year="2007" wikidata="Q2314942" title="The History of The Hobbit"/>
+  <book year="2013" wikidata="Q1101425" title="The Fall of Arthur"/>
+  <book year="2015" wikidata="Q20647835" title="The Story of Kullervo"/>
+  <book year="2018" wikidata="Q340515" title="Fall of Gondolin"/>
+</author>

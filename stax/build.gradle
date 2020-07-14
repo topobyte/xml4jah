@@ -1,0 +1,7 @@
+dependencies {
+    compile project(':xml4jah-core')
+
+    testCompile project(':xml4jah-dom')
+    testCompile 'de.topobyte:hrx:0.0.1'
+    testCompile 'junit:junit:4.12'
+}
