@@ -76,6 +76,7 @@
     <book year="2018" wikidata="Q340515" title="Fall of Gondolin"/>
   </author>
 </books>
+
 <===> fragment1.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <author wikidata="Q42" name="Douglas Adams">
@@ -92,6 +93,7 @@
   <book year="2002" wikidata="Q468135" title="The Salmon of Doubt"/>
   <book year="2014" wikidata="Q17110831" title="The Time Traveler's Almanac"/>
 </author>
+
 <===> fragment2.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <author wikidata="Q3335" name="George Orwell">
@@ -114,6 +116,7 @@
   <book year="1949" wikidata="Q208460" title="1984"/>
   <book year="1965" wikidata="Q5249517" title="Decline of the English Murder"/>
 </author>
+
 <===> fragment3.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <author wikidata="Q892" name="J. R. R. Tolkien">
