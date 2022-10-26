@@ -27,7 +27,6 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.junit.Test;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-import org.xml.sax.SAXException;
 
 import de.topobyte.xml4jah.core.AttributeOrder;
 import de.topobyte.xml4jah.core.DocumentWriterConfig;
@@ -36,8 +35,7 @@ public class TestDocumentCreation
 {
 
 	@Test
-	public void test1()
-			throws IOException, ParserConfigurationException, SAXException
+	public void test1() throws IOException, ParserConfigurationException
 	{
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 		DocumentBuilder db = dbf.newDocumentBuilder();
@@ -62,8 +60,7 @@ public class TestDocumentCreation
 	}
 
 	@Test
-	public void test2()
-			throws IOException, ParserConfigurationException, SAXException
+	public void test2() throws IOException, ParserConfigurationException
 	{
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 		DocumentBuilder db = dbf.newDocumentBuilder();
@@ -89,8 +86,7 @@ public class TestDocumentCreation
 	}
 
 	@Test
-	public void test3()
-			throws IOException, ParserConfigurationException, SAXException
+	public void test3() throws IOException, ParserConfigurationException
 	{
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 		DocumentBuilder db = dbf.newDocumentBuilder();

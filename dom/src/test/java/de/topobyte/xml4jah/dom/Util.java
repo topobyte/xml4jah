@@ -58,8 +58,7 @@ public class Util
 	}
 
 	public static void test(String resource, Document doc,
-			DocumentWriterConfig config)
-			throws IOException, SAXException, ParserConfigurationException
+			DocumentWriterConfig config) throws IOException
 	{
 		String text = Util.documentAsText(resource);
 
@@ -72,7 +71,6 @@ public class Util
 	}
 
 	public static List<Book> books1(Document doc)
-			throws IOException, ParserConfigurationException, SAXException
 	{
 		List<Book> books = new ArrayList<>();
 

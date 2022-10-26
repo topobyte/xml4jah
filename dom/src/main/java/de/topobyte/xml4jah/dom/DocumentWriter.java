@@ -238,7 +238,6 @@ public class DocumentWriter
 	}
 
 	private void writeAttributes(StringBuilder buf, NamedNodeMap attributes)
-			throws IOException
 	{
 		for (int i = 0; i < attributes.getLength(); i++) {
 			Node item = attributes.item(i);
